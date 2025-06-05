@@ -145,8 +145,17 @@
     <div class="container main-content">
         <div class="content-box">
             <div class="content-title">Tính năng chưa sẵn sàng để hoạt động. Comming soon.</div>
+            <div>Access Information</div>
+            <div>Documents ID</div>
+            <input id="id">
+            <div>Access Code</div>
+            <input id="accode"> </br>
+            <div id="kq"></div>
+            <button onclick="submit()">Submit</button>
         </div>
     </div>
+
+
     
     <footer>
         <div class="container">
@@ -154,4 +163,29 @@
         </div>
     </footer>
 </body>
+
+<script>
+    // data
+    
+    // function
+    data_id = ["test"];
+    data_accesscode = ["0"];
+
+    function submit()
+    {
+        var docsid = document.getElementById("id").value;
+        var accessdocs = document.getElementById("accode").value;
+        
+        for(let i = 0; i < data_id.length; i++)
+        {
+            if(docsid == data_id[i] && accessdocs == data_accesscode[i])
+            {
+                loca = "/navigate/private/" + docsid + ".pdf";
+                document.getElementById("kq").innerHTML = loca;
+                window.location.href = loca;
+            }
+        }
+        document.getElementById("kq").innerHTML = "Access Information không chính xác."
+    }
+</script>
 </html>
