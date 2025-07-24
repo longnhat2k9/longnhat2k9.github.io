@@ -125,7 +125,8 @@
             margin-top: 20px;
             font-size: 14px;
         }
-        .code-container {
+
+    .code-container {
       position: relative;
       margin-bottom: 2rem;
     }
@@ -197,6 +198,7 @@
             
 
             <h3>Hướng dẫn active</h3>
+
             <div>
                 <h4>Cách 1: Sử dụng command prompt</h4>
                 - Mở command prompt (cmd) dưới quyền administrator </br>
@@ -335,10 +337,27 @@ pause >nul
                  </div>
 
                  <div>Tiến hành chuột trái vào file vừa tạo chọn "Run as administrator". Nếu hiện Product activated successfully" thì đã active thành công</div>
-            </div>
 
-        </div>
-    </div>
+             </div>
+             </div>
+             </div>
+         </div>
+</div>
+
+    <script>
+    function copyCode(button) {
+      const code = button.nextElementSibling.querySelector('code').innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        button.textContent = "Đã copy!";
+        setTimeout(() => {
+          button.textContent = "Copy";
+        }, 1500);
+      }).catch(err => {
+        console.error('Lỗi khi copy:', err);
+        button.textContent = "Lỗi!";
+      });
+    }
+  </script>
     
     <footer>
         <div class="container">
