@@ -1,5 +1,3 @@
-https://longnhat2k9.github.io </br>
-
 # Hướng dẫn sử dụng
 
 1. Tài liệu: Nơi lưu các tài liệu hỗ trợ học tập.
